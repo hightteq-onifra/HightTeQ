@@ -1,7 +1,0 @@
---------------Pour demarer le projet-------------------
-- cloner le projet avec la commande: git clone https://github.com/hightteq-onifra/HightTeQ.git
-- Aller dans le dossier "HighTeQ/backend"
-- installer les dependances: pip install -r requirement.txt
-- Créer le fichier env avec les crédentials nécessaires
-- lancer le projet avec la commande: python manage.py runserver
--------------------------------------------------------- 
