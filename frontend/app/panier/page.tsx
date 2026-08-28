@@ -70,7 +70,7 @@ export default function CartPage() {
                       </button>
                     </div>
 
-                    <div className="text-right min-w-[110px]">
+                    <div className="text-right min-w-27.5">
                       <span className="text-[10px] text-white/40 block uppercase">Sous-total</span>
                       <span className="font-extrabold text-white text-base">
                         {formatPrice(item.priceNumeric * item.quantity)}
