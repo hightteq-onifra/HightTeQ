@@ -87,7 +87,7 @@ export default function UserDashboard() {
           
           <div className="flex items-center gap-10">
             <Link href="/dashboard" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#004ac6] to-[#06B6D4] flex items-center justify-center text-white font-black text-base shadow-lg group-hover:scale-105 transition-transform">
+              <div className="w-10 h-10 rounded-xl bg-linear-to-tr from-[#004ac6] to-[#06B6D4] flex items-center justify-center text-white font-black text-base shadow-lg group-hover:scale-105 transition-transform">
                 HT
               </div>
               <span className="font-extrabold text-2xl tracking-wide">
@@ -137,7 +137,7 @@ export default function UserDashboard() {
                 onClick={() => setIsProfileOpen(!isProfileOpen)}
                 className="flex items-center gap-3 p-1 rounded-full hover:bg-white/5 transition-colors focus:outline-none cursor-pointer"
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 p-[2px] shadow-md">
+                <div className="w-10 h-10 rounded-full bg-linear-to-r from-blue-600 to-cyan-500 p-0.5 shadow-md">
                   <div className="w-full h-full bg-[#0b1c30] rounded-full flex items-center justify-center font-extrabold text-sm text-[#06B6D4]">
                     U
                   </div>
@@ -190,21 +190,21 @@ export default function UserDashboard() {
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-left">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6 drop-shadow-lg">
-              L'Excellence <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] via-blue-400 to-cyan-200">
+              L&#39Excellence <br />
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#06B6D4] via-blue-400 to-cyan-200">
                 Technologique
               </span> <br />
               à votre portée.
             </h1>
 
             <p className="text-base sm:text-lg text-white max-w-xl font-medium leading-relaxed mb-8 drop-shadow-md">
-              Accédez à nos équipements informatiques certifiés et bénéficiez de nos services d'assistance et de maintenance d'experts à Madagascar.
+              Accédez à nos équipements informatiques certifiés et bénéficiez de nos services d&#39assistance et de maintenance d&#39experts à Madagascar.
             </p>
 
             <div className="flex flex-wrap items-center justify-start gap-4">
               <Link
                 href="/produit"
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#004ac6] to-[#06B6D4] hover:from-[#003bb0] hover:to-[#059abb] text-white font-bold text-sm shadow-lg shadow-[#004ac6]/30 hover:shadow-[#06B6D4]/40 hover:-translate-y-0.5 transition-all flex items-center gap-3 group"
+                className="px-8 py-4 rounded-xl bg-linear-to-r from-[#004ac6] to-[#06B6D4] hover:from-[#003bb0] hover:to-[#059abb] text-white font-bold text-sm shadow-lg shadow-[#004ac6]/30 hover:shadow-[#06B6D4]/40 hover:-translate-y-0.5 transition-all flex items-center gap-3 group"
               >
                 DÉCOUVRIR LES PRODUITS
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -225,7 +225,7 @@ export default function UserDashboard() {
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link 
               href="/produit"
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 p-8 hover:border-[#06B6D4]/50 transition-all duration-300 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-2xl bg-linear-to-br from-white/5 to-white/0 border border-white/10 p-8 hover:border-[#06B6D4]/50 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="absolute top-0 right-0 p-8 text-[#06B6D4]/20 group-hover:text-[#06B6D4]/40 transition-colors">
                 <Cpu className="w-24 h-24" />
@@ -242,7 +242,7 @@ export default function UserDashboard() {
 
             <Link 
               href="/services"
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 p-8 hover:border-[#004ac6]/50 transition-all duration-300 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-2xl bg-linear-to-br from-white/5 to-white/0 border border-white/10 p-8 hover:border-[#004ac6]/50 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="absolute top-0 right-0 p-8 text-[#004ac6]/20 group-hover:text-[#004ac6]/40 transition-colors">
                 <Wrench className="w-24 h-24" />
@@ -250,7 +250,7 @@ export default function UserDashboard() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#004ac6]">Solutions & Expertise</span>
               <h3 className="text-2xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Nos Services Informatiques</h3>
               <p className="text-white/60 text-sm max-w-sm mb-6">
-                Maintenance préventive, déploiement d'architectures réseau et réparations matérielles express.
+                Maintenance préventive, déploiement d&#39architectures réseau et réparations matérielles express.
               </p>
               <span className="inline-flex items-center gap-2 text-sm font-bold text-[#004ac6] group-hover:text-blue-400">
                 Découvrir nos services <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -340,7 +340,7 @@ export default function UserDashboard() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <span className="text-xs font-bold uppercase tracking-widest text-[#06B6D4]">Accompagnement Pro</span>
-              <h2 className="text-3xl font-extrabold mt-1 mb-4">Nos Services d'Experts</h2>
+              <h2 className="text-3xl font-extrabold mt-1 mb-4">Nos Services d&#39Experts</h2>
               <p className="text-white/60 text-sm">
                 Des solutions techniques adaptées aux besoins des particuliers et des entreprises à Madagascar.
               </p>
@@ -366,7 +366,7 @@ export default function UserDashboard() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Installation Réseau</h3>
                 <p className="text-white/60 text-sm leading-relaxed mb-6">
-                  Conception et mise en place d'infrastructures réseau haut débit et sécurisées pour votre entreprise.
+                  Conception et mise en place d&#39infrastructures réseau haut débit et sécurisées pour votre entreprise.
                 </p>
                 <Link href="/services" className="text-xs font-bold text-[#06B6D4] hover:underline inline-flex items-center gap-1">
                   En savoir plus <ChevronRight className="w-3 h-3" />
@@ -391,13 +391,13 @@ export default function UserDashboard() {
 
         {/* WhatsApp Section */}
         <section className="py-16 max-w-7xl mx-auto px-6">
-          <div className="bg-gradient-to-r from-emerald-950/60 via-emerald-900/40 to-slate-900/80 border border-emerald-500/30 rounded-3xl p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
+          <div className="bg-linear-to-r from-emerald-950/60 via-emerald-900/40 to-slate-900/80 border border-emerald-500/30 rounded-3xl p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
             <div className="flex items-center gap-6">
               <div className="w-16 h-16 rounded-2xl bg-emerald-500 text-slate-950 flex items-center justify-center shrink-0 shadow-lg shadow-emerald-500/20">
                 <MessageCircle className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-1">Besoin d'un conseil en direct ?</h3>
+                <h3 className="text-2xl font-bold text-white mb-1">Besoin d&#39un conseil en direct ?</h3>
                 <p className="text-white/70 text-sm">Discutez immédiatement avec nos experts HighTeQ sur WhatsApp.</p>
               </div>
             </div>
