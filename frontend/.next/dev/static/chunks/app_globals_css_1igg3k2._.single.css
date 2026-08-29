@@ -71,18 +71,21 @@
 
 @layer theme {
   :root, :host {
+    --color-red-200: #ffcaca;
     --color-red-400: #ff6568;
     --color-red-500: #fb2c36;
     --color-red-600: #e40014;
     --color-orange-600: #f05100;
     --color-yellow-600: #cd8900;
     --color-green-600: #00a544;
+    --color-emerald-200: #a4f4cf;
     --color-emerald-400: #00d294;
     --color-emerald-500: #00bb7f;
     --color-emerald-600: #009767;
     --color-emerald-900: #004e3b;
     --color-emerald-950: #002c22;
     --color-cyan-200: #a2f4fd;
+    --color-cyan-300: #53eafd;
     --color-cyan-400: #00d2ef;
     --color-cyan-500: #00b7d7;
     --color-blue-400: #54a2ff;
@@ -99,6 +102,7 @@
     --container-lg: 32rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
+    --container-4xl: 56rem;
     --container-6xl: 72rem;
     --container-7xl: 80rem;
     --text-xs: .75rem;
@@ -155,18 +159,21 @@
 
   @supports (color: lab(0% 0 0)) {
     :root, :host {
+      --color-red-200: lab(86.017% 19.8815 7.75869);
       --color-red-400: lab(63.7053% 60.7449 31.3109);
       --color-red-500: lab(55.4814% 75.0732 48.8528);
       --color-red-600: lab(48.4493% 77.4328 61.5452);
       --color-orange-600: lab(57.1026% 64.2584 89.8886);
       --color-yellow-600: lab(62.7799% 22.4198 86.1544);
       --color-green-600: lab(59.0978% -58.6621 41.2579);
+      --color-emerald-200: lab(90.2247% -31.039 9.47084);
       --color-emerald-400: lab(75.0771% -60.7313 19.4146);
       --color-emerald-500: lab(66.9756% -58.27 19.5419);
       --color-emerald-600: lab(55.0481% -49.9246 15.93);
       --color-emerald-900: lab(28.8637% -26.9249 5.45986);
       --color-emerald-950: lab(15.0582% -17.9507 2.38369);
       --color-cyan-200: lab(91.0821% -24.0435 -12.8306);
+      --color-cyan-300: lab(85.3886% -36.7635 -21.5717);
       --color-cyan-400: lab(76.6045% -40.9406 -29.6231);
       --color-cyan-500: lab(67.805% -35.3952 -30.2018);
       --color-blue-400: lab(65.0361% -1.42062 -56.9803);
@@ -630,12 +637,20 @@
     margin-bottom: var(--spacing);
   }
 
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
 
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
+  }
+
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
   }
 
   .mb-6 {
@@ -873,6 +888,10 @@
     max-width: var(--container-2xl);
   }
 
+  .max-w-4xl {
+    max-width: var(--container-4xl);
+  }
+
   .max-w-6xl {
     max-width: var(--container-6xl);
   }
@@ -1024,6 +1043,12 @@
     margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
   }
 
+  :where(.space-y-5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+
   :where(.space-y-6 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
@@ -1121,6 +1146,26 @@
     }
   }
 
+  .border-emerald-500\/40 {
+    border-color: #00bb7f66;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-emerald-500\/40 {
+      border-color: color-mix(in oklab, var(--color-emerald-500) 40%, transparent);
+    }
+  }
+
+  .border-red-500\/40 {
+    border-color: #fb2c3666;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-red-500\/40 {
+      border-color: color-mix(in oklab, var(--color-red-500) 40%, transparent);
+    }
+  }
+
   .border-white\/5 {
     border-color: #ffffff0d;
   }
@@ -1172,6 +1217,11 @@
 
   .bg-\[\#004ac6\] {
     background-color: #004ac6;
+  }
+
+  .bg-\[\#004ac6\]\/30 {
+    background-color: #004ac64d;
+    background-color: lab(34.6657% 22.0095 -71.0455 / .3);
   }
 
   .bg-\[\#06B6D4\] {
@@ -1249,6 +1299,16 @@
     background-color: var(--color-emerald-500);
   }
 
+  .bg-emerald-500\/10 {
+    background-color: #00bb7f1a;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-emerald-500\/10 {
+      background-color: color-mix(in oklab, var(--color-emerald-500) 10%, transparent);
+    }
+  }
+
   .bg-emerald-600 {
     background-color: var(--color-emerald-600);
   }
@@ -1267,6 +1327,16 @@
 
   .bg-purple-600 {
     background-color: var(--color-purple-600);
+  }
+
+  .bg-red-500\/10 {
+    background-color: #fb2c361a;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-red-500\/10 {
+      background-color: color-mix(in oklab, var(--color-red-500) 10%, transparent);
+    }
   }
 
   .bg-red-600 {
@@ -1812,6 +1882,14 @@
     color: #cbdbf6;
   }
 
+  .text-emerald-200 {
+    color: var(--color-emerald-200);
+  }
+
+  .text-red-200 {
+    color: var(--color-red-200);
+  }
+
   .text-red-400 {
     color: var(--color-red-400);
   }
@@ -2137,7 +2215,19 @@
     .group-hover\:text-white:is(:where(.group):hover *) {
       color: var(--color-white);
     }
+  }
 
+  .placeholder\:text-white\/35::placeholder {
+    color: #ffffff59;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .placeholder\:text-white\/35::placeholder {
+      color: color-mix(in oklab, var(--color-white) 35%, transparent);
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:-translate-y-0\.5:hover {
       --tw-translate-y: calc(var(--spacing) * -.5);
       translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -2187,6 +2277,11 @@
 
     .hover\:bg-\[\#3b82f6\]:hover {
       background-color: #3b82f6;
+    }
+
+    .hover\:bg-\[\#004ac6\]\/20:hover {
+      background-color: #004ac633;
+      background-color: lab(34.6657% 22.0095 -71.0455 / .2);
     }
 
     .hover\:bg-\[\#004ac6\]\/30:hover {
@@ -2270,12 +2365,20 @@
       color: #06b6d4;
     }
 
+    .hover\:text-cyan-300:hover {
+      color: var(--color-cyan-300);
+    }
+
     .hover\:text-white:hover {
       color: var(--color-white);
     }
 
     .hover\:underline:hover {
       text-decoration-line: underline;
+    }
+
+    .hover\:opacity-95:hover {
+      opacity: .95;
     }
 
     .hover\:shadow-2xl:hover {
@@ -2327,6 +2430,14 @@
     --tw-scale-y: 95%;
     --tw-scale-z: 95%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+
+  .disabled\:cursor-not-allowed:disabled {
+    cursor: not-allowed;
+  }
+
+  .disabled\:opacity-70:disabled {
+    opacity: .7;
   }
 
   @media (min-width: 40rem) {

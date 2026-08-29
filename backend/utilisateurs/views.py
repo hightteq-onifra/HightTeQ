@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics, permissions
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .models import Utilisateur
-from .serializers import InscriptionSerializer, UtilisateurSerializer
+from .serializers import InscriptionSerializer, UtilisateurSerializer, CustomTokenObtainPairSerializer
 
 class InscriptionView(generics.CreateAPIView):
     """POST /api/utilisateurs/inscription/ — ouvert à tout le monde."""
@@ -19,5 +19,5 @@ class ProfilView(generics.RetrieveUpdateAPIView):
         return self.request.user
 
 class ConnexionView(TokenObtainPairView):
-    """POST /api/utilisateurs/connexion/ — renvoie access + refresh token JWT."""
-    pass
+    """POST /api/utilisateurs/connexion/ — renvoie access + refresh token JWT avec le role."""
+    serializer_class = CustomTokenObtainPairSerializer
