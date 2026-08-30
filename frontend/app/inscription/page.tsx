@@ -13,7 +13,6 @@ export default function RegisterPage() {
     email: '',
     telephone: '',
     password: '',
-    role: 'client',
   });
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
@@ -47,7 +46,7 @@ export default function RegisterPage() {
           email: form.email,
           telephone: form.telephone,
           password: form.password,
-          role: form.role,
+          role: 'client', // Alefa direct 'client' ny role
         }),
       });
 
@@ -65,7 +64,9 @@ export default function RegisterPage() {
       }
 
       setSuccess('Compte créé avec succès. Vous pouvez maintenant vous connecter.');
-      setTimeout(() => router.push(form.role === 'admin' ? '/login/admin' : '/login/user'), 1200);
+      
+      // Redirect direct any amin'ny login ho an'ny user/client
+      setTimeout(() => router.push('/login/user'), 1200);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Une erreur est survenue lors de l’inscription.');
     } finally {
@@ -79,7 +80,7 @@ export default function RegisterPage() {
         <div className="mb-8 text-center">
           <p className="text-sm uppercase tracking-[0.25em] text-[#06B6D4] font-semibold">HighTeQ</p>
           <h1 className="mt-4 text-3xl font-extrabold">Créer un compte</h1>
-          <p className="mt-2 text-sm text-white/60">Inscription pour client ou administrateur.</p>
+          <p className="mt-2 text-sm text-white/60">Inscription client</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -119,18 +120,6 @@ export default function RegisterPage() {
                 placeholder="+261 34 ..."
               />
             </div>
-          </div>
-
-          <div>
-            <label className="mb-2 block text-sm font-medium text-white/80">Rôle</label>
-            <select
-              value={form.role}
-              onChange={(event) => handleChange('role', event.target.value)}
-              className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white focus:border-[#06B6D4] focus:outline-none"
-            >
-              <option value="client" className="bg-[#071324]">Client</option>
-              <option value="admin" className="bg-[#071324]">Administrateur</option>
-            </select>
           </div>
 
           <div>
@@ -180,7 +169,7 @@ export default function RegisterPage() {
 
         <div className="mt-6 text-center text-sm text-white/70">
           Vous avez déjà un compte ?{' '}
-          <Link href="/login" className="font-medium text-[#06B6D4] hover:text-cyan-300">
+          <Link href="/login/user" className="font-medium text-[#06B6D4] hover:text-cyan-300">
             Se connecter
           </Link>
         </div>
