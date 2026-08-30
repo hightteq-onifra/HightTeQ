@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { 
   Search, 
   ShoppingCart, 
@@ -22,11 +23,21 @@ import {
 import { useCart, Product } from '../context/CartContext';
 
 export default function UserDashboard() {
+  const router = useRouter();
   const { addToCart, totalItems } = useCart();
   const [searchQuery, setSearchQuery] = useState('');
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [addedId, setAddedId] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
+
+  const handleLogout = () => {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    localStorage.removeItem('userRole');
+    localStorage.removeItem('username');
+    setIsProfileOpen(false);
+    router.push('/login');
+  };
 
   // Sécurité SSR / Hydratation pour Next.js
   useEffect(() => {
@@ -158,7 +169,7 @@ export default function UserDashboard() {
                     Mon Profil
                   </Link>
                   <button 
-                    onClick={() => alert('Déconnexion...')}
+                    onClick={handleLogout}
                     className="w-full flex items-center gap-3 px-5 py-2.5 text-sm text-red-400 hover:bg-red-500/10 transition-colors text-left cursor-pointer"
                   >
                     <LogOut className="w-4 h-4" />
