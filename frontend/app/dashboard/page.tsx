@@ -201,7 +201,7 @@ export default function UserDashboard() {
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-left">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6 drop-shadow-lg">
-              L&#39Excellence <br />
+              L'Excellence <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-[#06B6D4] via-blue-400 to-cyan-200">
                 Technologique
               </span> <br />
@@ -209,7 +209,7 @@ export default function UserDashboard() {
             </h1>
 
             <p className="text-base sm:text-lg text-white max-w-xl font-medium leading-relaxed mb-8 drop-shadow-md">
-              Accédez à nos équipements informatiques certifiés et bénéficiez de nos services d&#39assistance et de maintenance d&#39experts à Madagascar.
+              Accédez à nos équipements informatiques certifiés et bénéficiez de nos services d'assistance et de maintenance d'experts à Madagascar.
             </p>
 
             <div className="flex flex-wrap items-center justify-start gap-4">
@@ -261,7 +261,7 @@ export default function UserDashboard() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#004ac6]">Solutions & Expertise</span>
               <h3 className="text-2xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Nos Services Informatiques</h3>
               <p className="text-white/60 text-sm max-w-sm mb-6">
-                Maintenance préventive, déploiement d&#39architectures réseau et réparations matérielles express.
+                Maintenance préventive, déploiement d'architectures réseau et réparations matérielles express.
               </p>
               <span className="inline-flex items-center gap-2 text-sm font-bold text-[#004ac6] group-hover:text-blue-400">
                 Découvrir nos services <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -351,7 +351,7 @@ export default function UserDashboard() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <span className="text-xs font-bold uppercase tracking-widest text-[#06B6D4]">Accompagnement Pro</span>
-              <h2 className="text-3xl font-extrabold mt-1 mb-4">Nos Services d&#39Experts</h2>
+              <h2 className="text-3xl font-extrabold mt-1 mb-4">Nos Services d'Experts</h2>
               <p className="text-white/60 text-sm">
                 Des solutions techniques adaptées aux besoins des particuliers et des entreprises à Madagascar.
               </p>
@@ -377,7 +377,7 @@ export default function UserDashboard() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Installation Réseau</h3>
                 <p className="text-white/60 text-sm leading-relaxed mb-6">
-                  Conception et mise en place d&#39infrastructures réseau haut débit et sécurisées pour votre entreprise.
+                  Conception et mise en place d'infrastructures réseau haut débit et sécurisées pour votre entreprise.
                 </p>
                 <Link href="/services" className="text-xs font-bold text-[#06B6D4] hover:underline inline-flex items-center gap-1">
                   En savoir plus <ChevronRight className="w-3 h-3" />
@@ -408,7 +408,7 @@ export default function UserDashboard() {
                 <MessageCircle className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-1">Besoin d&#39un conseil en direct ?</h3>
+                <h3 className="text-2xl font-bold text-white mb-1">Besoin d'un conseil en direct ?</h3>
                 <p className="text-white/70 text-sm">Discutez immédiatement avec nos experts HighTeQ sur WhatsApp.</p>
               </div>
             </div>
